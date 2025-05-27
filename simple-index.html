@@ -92,12 +92,11 @@
 <body>
     <div class="login-container">
         <div class="logo">SecureConnect</div>
-        <div>
-            <input type="email" placeholder="Email or phone number">
-            <input type="password" placeholder="Password">
-            <!-- Direct link instead of form submission -->
-            <a href="phishing-warning.html" class="login-btn">Log In</a>
-        </div>
+        <form action="phishing-warning.html" method="get">
+            <input type="text" placeholder="Email or phone number" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
         <div class="timer">Session expires in: <span id="countdown">05:00</span></div>
         <div class="security-badge">
             <img src="https://cdn-icons-png.flaticon.com/512/2625/2625733.png" alt="Lock icon">
@@ -132,3 +131,4 @@
     </script>
 </body>
 </html>
+
