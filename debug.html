@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .file-list {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .test-links {
+            margin-top: 20px;
+        }
+        .test-links a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #e0e0e0;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Page</h1>
+    
+    <div class="file-list">
+        <h2>Expected Files in Repository:</h2>
+        <ul>
+            <li>index.html (this should be in the root)</li>
+            <li>phishing-warning.html (this should be in the root)</li>
+            <li>README.md</li>
+        </ul>
+    </div>
+    
+    <div class="test-links">
+        <h2>Test Links:</h2>
+        <a href="index.html">Link to index.html</a>
+        <a href="phishing-warning.html">Direct link to phishing-warning.html</a>
+        <a href="./phishing-warning.html">Relative link to ./phishing-warning.html</a>
+        <a href="/phishing-warning.html">Root-relative link to /phishing-warning.html</a>
+    </div>
+    
+    <div>
+        <h2>JavaScript Redirect Test:</h2>
+        <button onclick="testRedirect()">Test JavaScript Redirect</button>
+    </div>
+    
+    <script>
+        function testRedirect() {
+            console.log("Testing redirect to phishing-warning.html");
+            window.location.href = 'phishing-warning.html';
+        }
+    </script>
+</body>
+</html>
